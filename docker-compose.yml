@@ -5,4 +5,6 @@ services:
     build: .
     ports:
       - 8052:8052
-    command: streamlit run 01_Top.py --server.port 80
+    volumes:
+      - ./:/app
+    command: streamlit run 01_Top.py --server.port 8052
