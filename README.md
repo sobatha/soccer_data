@@ -3,10 +3,10 @@
 
 
 ### Development
-To start development on your local, run the following.
+To start development on your local with docker, run the following.
 
 ```bash
-streamlit run 01_Top.py
+docker-compose up
 ```
 
 This app uses [streamlit](https://streamlit.io/), so directory structure follows streamlit's one.

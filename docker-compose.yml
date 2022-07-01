@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  anaconda:
+    build: .
+    ports:
+      - 8052:8052
+    command: streamlit run 01_Top.py --server.port 80
