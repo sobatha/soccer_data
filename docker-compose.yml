@@ -7,4 +7,4 @@ services:
       - 8052:8052
     volumes:
       - ./:/app
-    command: streamlit run 01_Top.py --server.port 8052
+    command: streamlit run 01_Goal_probabilty.py --server.port 8052
