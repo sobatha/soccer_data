@@ -61,7 +61,7 @@ pram = pd.DataFrame(pram, index=['i',])
 with open('KNN_model.pkl', mode='rb') as f:
     KNN_model = pickle.load(f)
 
-Goal_predict = KNN_model.predict_proba(pram)
+Goal_predict = 1 - KNN_model.predict_proba(pram)
 
 st.markdown(r""" ## シュート結果""")
 answer = st.button('結果を表示')
