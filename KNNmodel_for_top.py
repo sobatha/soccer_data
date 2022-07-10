@@ -10,7 +10,6 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 
-
 Barce_shots = pd.read_csv('LaLiga_shots_Barce_data_dummy_drop.csv')
 X = Barce_shots.drop('Goal', axis=1)
 y = Barce_shots['Goal']
@@ -21,8 +20,8 @@ sc.fit(X_train)
 X_train_std = sc.transform(X_train)
 X_test_std = sc.transform(X_test)
 
-KNN_model = KNeighborsClassifier()
+KNN_model = KNeighborsClassifier(n_neighbors=100, weights='distance'),
 KNN_model.fit(X_train_std, y_train)
 
 file = 'KNN_model.pkl'
-pickle.dump(KNN_model, open(file, 'wb'))
+pickle.dump(KNN_model, open(file, 'wb')) 
