@@ -8,9 +8,10 @@ from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
 
 Barce_shots = pd.read_csv('LaLiga_shots_Barce_data_dummy_drop.csv')
+Barce_shots = Barce_shots.drop([ 'Unnamed: 0'], axis = 1)
 X = Barce_shots.drop('Goal', axis=1)
 y = Barce_shots['Goal']
-X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0, stratify=y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 
 sc.fit(X_train)
 X_train_std = sc.transform(X_train)
