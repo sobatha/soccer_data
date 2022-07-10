@@ -18,6 +18,7 @@ st.markdown(r"""##### ※データはStatsBombのオープンデータを利用�
 
 
 Barce_shots = pd.read_csv('LaLiga_shots_Barce_data_dummy_drop.csv')
+Barce_shots = Barce_shots.drop([ 'Unnamed: 0'], axis = 1)
 Barce_shots = Barce_shots.drop('Goal', axis=1)
 columns = Barce_shots.columns.values.tolist()
 
