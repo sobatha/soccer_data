@@ -6,9 +6,6 @@ import pandas as pd
 import numpy as np
 import pickle
 from pandas import Series, DataFrame
-import matplotlib.pyplot as plt
-import matplotlib as mpl
-import seaborn as sns
 from collections import defaultdict
 
 st.set_page_config(layout="wide")
