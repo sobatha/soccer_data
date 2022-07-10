@@ -41,16 +41,23 @@ if st.checkbox("説明変数の詳細を表示"):
 
 pram = defaultdict(int)
 
-for column in columns:
-    pram[column] = 0
-
 selected_item = st.selectbox('play pattern　を選んでください',
                                  ['From Corner', 'From Counter', 'From Free Kick',
                                  'From Goal Kick', 'From Throw In'])
 
-pram[selected_item] = 1
+for column in columns:
+    if column in selected_item:
+        pram[column] = 1
+    else:
+        pram[column] = 0
 
-for item in ['shot_one_on_one', 'teammate_minus_enemy', 'In_PenaltyArea', 'shot_open_goal',
+teammate_minus_enemy = st.slider('プレーに関与する周りの味方の数ー敵チームの数を決めてください', min_value= -5,
+                            max_value=5, step = 1, value = 0)
+pram['teammate_minus_enemy'] = teammate_minus_enemy
+
+st.write('シュート時の状況を下記から選んでください')
+
+for item in ['shot_one_on_one', 'In_PenaltyArea', 'shot_open_goal',
                 'shot_aerial_won', 'Messi']:
     if st.checkbox(item):
         pram[item] = 1
