@@ -69,6 +69,6 @@ answer = st.button('結果を表示')
 
 if answer == True:
     Goal_predict = 1 - KNN_model.predict_proba(pram)
-     st.write("ゴール確率:{:.2%}".format(Goal_predict[0, 0]))
+    st.write("ゴール確率:{:.2%}".format(Goal_predict[0, 0]))
 
 
