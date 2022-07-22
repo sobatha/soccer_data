@@ -21,18 +21,18 @@ columns = Barce_shots.columns.values.tolist()
 if st.checkbox("説明変数の詳細を表示"):
     st.markdown(
         r"""
-        ### 説明変数
-        #### From Corner：　コーナーキックからの攻撃
-        #### From Counter：　カウンターからの攻撃
-        #### From Free Kick：フリーキックからの攻撃
-        #### From Goal Kick：　ゴールキックからの攻撃
-        #### From Throw In：　スローインからの攻撃
-        #### shot_one_on_one：　one on oneでのシュート
-        #### teammate_minus_enemy: プレーに関与した味方の数ー敵の数
-        #### In_PenaltyArea：　ペナルティエリア内からのシュートかどうか
-        #### shot_open_goal: そのゲームでの初回のシュート
-        #### shot_aerial_won: 空中戦での勝利
-        #### Messi : メッシによるシュート
+         ## 説明変数
+         + From Corner: コーナーキックからの攻撃
+         + From Counter: カウンターからの攻撃
+         + From Free Kick: フリーキックからの攻撃
+         + From Goal Kick：　ゴールキックからの攻撃
+         + From Throw In：　スローインからの攻撃
+         + shot_one_on_one：　one on oneでのシュート
+         + teammate_minus_enemy: プレーに関与した味方の数ー敵の数
+         + In_PenaltyArea：　ペナルティエリア内からのシュートかどうか
+         + shot_open_goal: そのゲームでの初回のシュート
+         + shot_aerial_won: 空中戦での勝利
+         + Messi : メッシによるシュート
         """
     )
 
